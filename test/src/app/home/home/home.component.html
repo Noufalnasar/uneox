@@ -1,0 +1,184 @@
+<nav class="navbar navbar-expand-lg navbar-light   fixed-top">
+
+    <div class="container-fluid">
+
+        <a class="navbar-brand ms-5 text-white" href="#" style="font-weight: 600; font-size: 25px;">Uneox</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav me-auto ms-5 mb-2 mb-lg-0 " style="padding-left:17%;">
+
+
+
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle nav-link active text-white " href="#" id="navbarDropdown"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                        Home
+
+                    </a>
+
+                    <ul class="dropdown-menu text-white " aria-labelledby="navbarDropdown">
+
+                        <li><a class="dropdown-item" href="#">Food delivery</a></li>
+
+                        <li><a class="dropdown-item" href="#">Water delivery</a></li>
+
+                        <li><a class="dropdown-item" href="#">Pizza time</a></li>
+
+                    </ul>
+
+                </li>
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle text-white ms-3" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+
+                        About us
+
+                    </a>
+
+                    <ul class="dropdown-menu text-white" aria-labelledby="navbarDropdown">
+
+                        <li><a class="dropdown-item" href="#">Testimonials</a></li>
+
+                        <li><a class="dropdown-item" href="#">FAQ</a></li>
+
+                        <li><a class="dropdown-item" href="#">Gallery</a></li>
+
+                    </ul>
+
+                </li>
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle text-white ms-3" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+
+                        Catalog
+
+                    </a>
+                    <ul class="dropdown-menu text-dark" aria-labelledby="navbarDropdown">
+
+                        <li><a class="dropdown-item" href="#">Shop</a></li>
+
+                        <li><a class="dropdown-item" href="#">Cart</a></li>
+
+                        <li><a class="dropdown-item" href="#">Checkout</a></li>
+
+                        <li><a class="dropdown-item" href="#">My Account</a></li>
+
+                    </ul>
+
+                </li>
+
+                <li class="nav-item text-white ms-3">
+
+                    <a class="nav-link text-dark" href="#">Contacts</a>
+
+                </li>
+
+
+
+            </ul>
+            <form class="d-flex">
+
+                <input class="form-control me-2 rounded-pill  text-white" type="search" placeholder="Search"
+                    aria-label="Search" id="searchbar">
+
+                <button class=" btn btn-secondary rounded-pill " type="submit" id="b1">Search</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</nav>
+<div class="container">
+    <div class="row" style="margin-top: 6rem;">
+        <div class="col-6  " style="margin-top: 5rem;">
+            <h1 style="color: rgb(202, 206, 209);">Welcome To Uneox</h1>
+            <p style="text-align: left; line-height: 1.5; font-weight: 400; color: rgb(202, 206, 209); " class="mt-3">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet autem pariatur, facilis saepe, quos
+                accusantium,
+                cum voluptatum inventore quasi est reprehe Atque vero saepe totam! Eaque in
+                vero ab nam delectus atque consequuntur ea, laboriosam quo quibusdam corrupti iste voluptates a ullam
+                beatae!</p>
+
+            <p style="text-align: left; line-height: 1.5; font-weight: 400; color: rgb(202, 206, 209); " class="mt-3">
+                Please select any one and answer it.</p>
+
+            <h6 class="mt-2" style="text-align: left; line-height: 1.5; font-weight: 400; color: rgb(202, 206, 209); ">
+                <span>
+                    <input type="checkbox" (click)="showModal()">
+                </span> Processor <span>
+                    <input type="checkbox" (click)="Dialog()" name="groupname" class="ms-2"> Graphics Card
+                </span>
+            </h6>
+            <div *ngIf="isTick==true" >
+                <div class="container " style="border-radius: 25px;" id="popup">
+                    <div class="row">
+                        <h5 class="text-white text-center mt-4"> choose the odd one ?</h5>
+                        <!-- <label class="text-dark mt-4 " for="i3" style="margin-left:9rem ;"><span><input type="radio" id=" i3" value="Intel Core i3" (click)="isCorrect()"></span> Intel Core i3 <span style="margin-left:7rem ;" ><input type="radio"  value="Intel Core i7"  id=" i7" (click)="isCorrect()"></span><label for="i7">Intel Core i7</label> </label> -->
+                        <!-- <label class="text-dark mt-2 mb-5 " for="i5" style="margin-left:9rem ;"><span><input type="radio" id=" i5"  value="Intel Core i5"  (click)="isCorrect()"></span> Intel Core i5 <span style="margin-left:7rem ;" ><input type="radio" id=" R5"  value="Ryzen 5" (click)="isCorrect()" ></span><label for="R5">Ryzen 5</label> </label> -->
+                        <div class="row mt-3">
+                            
+<div class="col-3"></div>
+                                <div class="col-3">
+                                    <p-radioButton name="groupname" value="Intel Core i3" [(ngModel)]="core" name="core" (change)="radioChange($event)" >
+                                    </p-radioButton><span><label class="text-white" style="margin-left: 10px; margin-top: -100px;"
+                                            for="">Intel Core i3</label></span>
+                                    <p-radioButton name="groupname" value="Intel Core i5" [(ngModel)]="core" name="core" (change)="radioChange($event)" >
+                                    </p-radioButton><span><label class="text-white" style="margin-left: 10px; margin-top: -100px;"
+                                            for="">Intel Core i5</label></span>
+                                </div>
+                                <div class="col-4 ms-5">
+                                    <p-radioButton name="groupname" value="Intel Core i7" [(ngModel)]="core" name="core" (change)="radioChange($event)" >
+                                    </p-radioButton><span><label class="text-white" style="margin-left: 10px; margin-top: -100px;"
+                                            for="">Intel Core i7</label></span>
+                                    <p-radioButton name="groupname" value="Ryzen 5" [(ngModel)]="core" name="core" (change)="radioChange($event)" >
+                                    </p-radioButton><span><label class="text-white" style="margin-left: 10px; margin-top: -100px;" for="">Ryzen
+                                            5</label></span>
+                                </div>
+                                <h6 class="text-white text-center mt-2">{{selectedValue}}</h6>
+
+                                <div class="text-center">
+                                    <button class="btn btn-primary mb-4 mt-3 " 
+                                        style="width: 25%;"  (click)="isCorrect()">OK</button>
+                                        <div *ngIf="isClicked==true">
+                                            {{showAnswer()}}
+                                           <h6 class="text-danger mt-2">Wrong Answer:- {{wrong}} <span><h6 class="text-success" style="text-align: right; ">Correct Answer:- {{correct}}</h6>
+                                           </span> </h6>
+                                        </div>
+        
+                                </div>
+                                
+                            
+                    
+                   
+                            
+                        
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+
+            <img src="assets\images\banner-illus.png" alt="" srcset="" style="width:35rem ; margin-left: 7rem;">
+        </div>
+    </div>
+
+</div>

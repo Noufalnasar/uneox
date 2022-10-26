@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+body,nav,#searchbar{
+    background-image: url(assets\images\dashboard-banner-bg.png);
+    background-repeat:no-repeat ;
+    background-size: 200rem;
+}
+/* #searchbar{
+    background-color: rgb(61, 26, 94);
+
+} */
